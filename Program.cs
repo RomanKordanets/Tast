@@ -12,11 +12,30 @@ void PrintArray(string[] array)
     }
     Console.WriteLine();
 }
+string[] FillNewArray(string[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3) count++;
+    }
 
+    string[] newArray = new string[count];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[newArray.Length - count] = array[i];
+            count--;
+        }
+    }
+    return newArray;
+}
 
 string[] array = new string[18] { "There", "are", "different", "kinds", "of",
  "animals", "on", "our", "planet", "and", "all", "of", "them", "are", "very",
  "important", "for", "it" };
 PrintArray(array);
-string[] newArray = RowCount(array);
+string[] newArray = FillNewArray(array);
 PrintArray(newArray);
