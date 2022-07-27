@@ -36,7 +36,7 @@ string[] FillNewArray(string[] array)
 string[] array = new string[18] { "There", "are", "different", "kinds", "of",
  "animals", "on", "our", "planet", "and", "all", "of", "them", "are", "very",
  "important", "for", "it" };
-PrintArray(array);
 string[] newArray = FillNewArray(array);
+PrintArray(array);
 System.Console.WriteLine("<=3");
 PrintArray(newArray);
